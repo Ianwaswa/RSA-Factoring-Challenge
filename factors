@@ -1,20 +1,6 @@
-import sys
-import math
+#!/usr/bin/python3
 
-# Open the file passed as a command line argument
-file = open(sys.argv[1], "r")
+from factors_functions import *
+if __name__ == '__main__':
 
-# Iterate through each line in the file
-for num in file:
-    num = int(num)
-    for i in range(2, int(math.sqrt(num))+1):
-        if num % i == 0:
-            p = i
-            q = num // i
-            print(f"{num} = {p} * {q}")
-            break
-    else:
-        print(f"{num} = {num} * 1")
-
-# Close the file
-file.close()
+    print(unix_time(print_factors))
